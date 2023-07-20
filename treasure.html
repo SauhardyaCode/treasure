@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure</title>
+    <style>
+        body {
+            background-color: rgb(253, 220, 225);
+        }
+
+        #page-1,
+        #page-2,
+        #page-3,
+        #page-4 {
+            text-align: center;
+            padding-bottom: 3%;
+            border: 2px dashed red;
+        }
+
+        #page-4 {
+            background-color: black;
+        }
+
+        .title {
+            font-family: 'Lucida Sans';
+            font-size: 1.3em;
+            font-weight: 500;
+            padding: 3%;
+        }
+
+        .surprise {
+            padding: 2%;
+            background-color: rgb(248, 106, 153);
+            color: white;
+            font-size: 1.2em;
+            border-radius: 5px;
+            border: none;
+        }
+
+        #start:hover {
+            background-color: rgb(248, 76, 133);
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            padding: 3%;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        #counter-div {
+            padding: 5%;
+            font-family: Verdana;
+            color: #717171;
+        }
+
+        #letter {
+            font-size: 1.1em;
+            color: blueviolet;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            word-spacing: 0.2em;
+            background-color: rgba(240, 248, 255, 0.3);
+            padding: 3%;
+            text-align: left;
+        }
+
+        .shayari {
+            text-align: center;
+            padding-top: 5%;
+            font-size: 0.7em;
+            word-spacing: 0;
+            font-family: 'Lucida Sans';
+        }
+
+        .navigation {
+            padding: 3%;
+            font-size: 1.5em;
+            border: none;
+            background-color: red;
+            color: white;
+        }
+
+        #bye {
+            padding: 1.5%;
+            color: pink;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page-1">
+        <div class="title">I Love You, Shuju! &#128147;</div><br>
+        <img src="start.gif" width="300"><br><br><br>
+        <button class="surprise" onclick="change_page(1, 2)">Click for surprise &#127871;</button>
+    </div>
+
+    <div id="page-2" hidden>
+        <div class="title">Thanks for making my life special &#128512;</div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="pic1.png" width="300">
+            </div>
+            <div class="mySlides fade">
+                <img src="pic2.png" width="300">
+            </div>
+            <div class="mySlides fade">
+                <img src="pic3.png" width="300">
+            </div>
+            <div class="mySlides fade">
+                <img src="pic4.png" width="300">
+            </div>
+            <div class="mySlides fade">
+                <img src="pic5.png" width="300">
+            </div>
+            <div class="mySlides fade">
+                <img src="pic6.png" width="300">
+            </div>
+            <div class="mySlides fade">
+                <img src="pic7.png" width="300">
+            </div>
+        </div>
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <div id="counter-div">Countdown running... <span id="counter"></span></div>
+        <button class="navigation" style="float: left;" onclick="change_page(2, 1)" hidden>&lt;</button>
+        <button class="navigation" style="float: right;" onclick="change_page(2, 3)" hidden>&gt;</button>
+    </div>
+
+    <div id="page-3" style="padding: 3%;" hidden>
+        <div id="letter">
+            Dear Sreeja,<br><br>
+            I hope this letter finds you with a healthy and smiling face, and a bit free of what wrong is going on
+            there in your personal life. You always wanted to read out a love letter right? So much, that you wrote by
+            yourself to the future Sreeja, and that kind of made me cry. I wanna kind of fulfill your wish, although not
+            as your BF but maybe as one of your BFF. Whatever I write below summarises to the screen you saw at
+            first!<br>
+            <div class="shayari" style="color: brown;">
+                Daasta shuru ik chotey gaanv k badey maidaan se<br>
+                Sastey se khiloney, aur khilkhilahat se..<br>
+                Khiloney gaye toot aur khilkhilahat bhi gayi choot<br>
+                Dobara restore kiya truth-dare aur telegram ne..
+            </div>
+            <div class="shayari" style="color: rgb(23, 151, 9);">
+                Dilbar na mili mujhe gum me the ji rahe<br>
+                Tum jo aayi bankar dost, ab gum se hum kya darey..<br>
+                Lagta jaise mili mujhe ek roshni<br>
+                Kal tak jo tha introvert, aaj bana wo fuljhari..
+            </div>
+            <div class="shayari" style="color: rgb(92, 4, 104);">
+                Bharosa kya hota hai, aaj hai maine jaana<br>
+                Tumse badhkar kisi par mushkil hai kar paana..<br>
+                Yaad dilana na parey ki bro this is secret<br>
+                Aisa hai ab rishta humara, so cool and sacred..
+            </div>
+            <div class="shayari" style="color: rgb(15, 107, 94);">
+                Nobita ko Doraemon ki, Motu ko Patlu ki<br>
+                Aur mujhe, bro tumhari..<br>
+                Hai zaroorat kaafi life me kyuki<br>
+                Koi puch le BFF ka naam, zabaan na parey sukhi..
+            </div><br><br>
+            Huh! That's what I can pleasure you with while we continue this long distance relationship &#128513;. I know
+            this letter is enough to bring a smile on your face however frustated you are. I hope the celebration of 50k
+            runs smooth and we continue appending zeroes to this number. As I always say, I have never thought that we
+            could somehow reunite after such a long and horrific communication gap of almost <code>189388800</code>
+            seconds and further, the reunion would be so strong that imagining a night without your "Byee" would make me
+            sad. I have undergone many sad detachments in my life but this one attachment is almost enough to rule all
+            those out. You are the first and last reader of my diary till now and I can see the future, you reading the
+            last page
+            of my diary before I get wiped out from this planet. Obviously, at such an age we possibly won't be using
+            Telegram but somehow we would still be having a daily communication and know each other's life better than
+            our own. I want you to prove me correct in this dream. With this, I am ending the letter. This is that
+            letter whose cover I pinned on 6th July, 2023 on Telegram. Continue your treasure..<br><br>
+            Your Luckiest Cousin<br><br>
+        </div>
+        <button class="navigation" style="float: left;" onclick="change_page(3, 2)">&lt;</button>
+        <button class="navigation" style="float: right;" onclick="change_page(3, 4)">&gt;</button>
+    </div>
+
+    <div id="page-4" hidden>
+        <div id="congo">
+            <img src="50k.gif" width="300"><br><br>
+            <img src="dance.gif" width="300"><br><br>
+            <button class="surprise"
+                onclick="document.getElementById('bye').hidden=false; document.getElementById('congo').hidden=true;">Next
+                surprise?</button><br><br>
+        </div>
+        <div id="bye" hidden>
+            <img src="bye.gif" width="300"><br>
+            (Close it and open telegram after this scooty stops! &#128513;)<br><br>
+            That's it broo.. Congrats for 50k messages and for ending the Treasure Hunt..<br>
+            Cheers!! &#127867;<br><br>
+            <button class="navigation" onclick="change_page(4, 3)">&lt;</button>
+        </div>
+    </div>
+
+    <script>
+        function change_page(now, then) {
+            document.getElementById(`page-${now}`).hidden = true;
+            document.getElementById(`page-${then}`).hidden = false;
+            const counter_div = document.getElementById("counter-div");
+            const nav1 = document.getElementsByClassName("navigation")[0];
+            const nav2 = document.getElementsByClassName("navigation")[1];
+            if (then == 2) {
+                if (now == 1) {
+                    document.getElementById("counter").innerHTML = 40;
+                    nav1.hidden = true;
+                    nav2.hidden = true;
+                    counter_div.hidden = false;
+                    start_count();
+                    showSlides();
+                }
+                else {
+                    nav1.hidden = false;
+                    nav2.hidden = false;
+                    counter_div.hidden = true;
+                }
+            }
+        }
+
+        let slideIndex = 0;
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 3000);
+        }
+
+        function start_count() {
+            const counter = document.getElementById("counter")
+            const interval = setInterval(() => {
+                counter.innerHTML = Number(counter.innerHTML) - 1;
+                if (counter.innerHTML == "-1") {
+                    counter.innerHTML = "BOOM!";
+                }
+                else if (counter.innerHTML == "NaN") {
+                    change_page(2, 3)
+                    clearInterval(interval);
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>
